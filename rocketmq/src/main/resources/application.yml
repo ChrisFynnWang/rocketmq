@@ -1,0 +1,8 @@
+server:
+  port: 9875
+  #  port: 8012
+  servlet-path: /*
+  context-path: /rocketmq
+spring:
+  application:
+    name: rocketmq
