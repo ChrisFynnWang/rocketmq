@@ -18,6 +18,7 @@ public class ConsumerConfig {
         consumer.setNamesrvAddr(Constants.NAME_SERVER);
         consumer.subscribe(TopicEnum.COMMAND.toString(), "*");
         consumer.registerMessageListener(listener);
+        consumer.setMaxReconsumeTimes(1);
         return consumer;
     }
 }

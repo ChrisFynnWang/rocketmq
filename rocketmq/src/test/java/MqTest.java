@@ -32,7 +32,6 @@ public class MqTest {
     @Test
     public void productMsg() throws InterruptedException, RemotingException, MQClientException, MQBrokerException, UnsupportedEncodingException {
         Message message = new Message(TopicEnum.COMMAND.toString(), "ice".getBytes(RemotingHelper.DEFAULT_CHARSET));
-        SendResult send = producer.send(message);
-        System.out.println(JSON.toJSONString(send));
+        producer.sendOneway(message);
     }
 }

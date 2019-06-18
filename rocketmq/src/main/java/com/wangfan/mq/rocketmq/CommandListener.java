@@ -32,6 +32,6 @@ public class CommandListener implements MessageListenerConcurrently {
             } catch (UnsupportedEncodingException e) {
             }
         }
-        return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
+        return ConsumeConcurrentlyStatus.RECONSUME_LATER;
     }
 }
